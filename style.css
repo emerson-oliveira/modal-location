@@ -1,0 +1,89 @@
+.container {
+    font-family: "Open Sans", arial, sans-serif;
+}
+.location-form {
+    left: 50%;
+    max-width: 522px;
+    position: absolute;
+    top: 20%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+.location-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: url(img/background.png);
+}
+.overlay {
+    background-color: #0007;
+    width: 100%;
+    height: 100%;
+}
+.background-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-color:#FFF;
+    padding: 3rem 1.5rem;
+    position: relative;
+}
+.geolocation-link {
+    color: #e31837;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 16px 0px 24px;
+}
+.modal-title {
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: center;
+}
+.modal-text {
+    color: #2e2e2e;
+    font-size: 16px;
+    margin: 8px 0px 0px;
+    padding: 0px 84px;
+    text-align: center;
+}
+.region-select {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.text-input {
+    margin: 0.5rem 0px;
+    width: 100%;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+    font-family: "Leroy Merlin Sans", sans-serif;
+    color: rgb(102, 102, 102);
+    border: 0.0625rem solid rgb(238, 238, 240);
+    outline: transparent;
+    border-radius: 1.875rem;
+    appearance: none;
+    transition: all 300ms ease-in 0s;
+    max-width: 250px;
+}
+.btn-sucess {
+    display: block;
+    float: none;
+    margin: auto;
+    border: 0;
+    background-color: #e31837;
+    color: #fff;
+    height: 40px;
+    line-height: 32px;
+    width: 290px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+}

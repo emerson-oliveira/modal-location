@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mocal Localização</title>
+    <script src="https://kit.fontawesome.com/290df5bba9.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="location-wrapper overlay overlay-dark visible">
+            <div class="overlay">
+                <div>
+                    <svg class="spinner" width="50" height="50" viewBox="0 0 66 66"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30">
+                        </circle>
+                    </svg>
+                </div>
+            </div>
+            <form autocomplete="off" class="location-form">
+                <div class="background-form">
+                    <h2 class="modal-title">Onde você está?</h2>
+                    <p class="modal-text">
+                        Dessa forma você terá acesso aos produtos e ofertas da sua região.
+                    </p>
+                    <span class="geolocation-link">
+                        <i class="fas fa-map-marker-alt"></i> Utilizar localização automática
+                    </span>
+                        <span class="modal-text">Você também pode:</span>
+                    <div class="region-select">
+                        <input type="text" name="city" placeholder="Digitar o nome da cidade" class="text-input" 
+                        value="">
+                    </div>
+                    <span class="modal-text">ou</span>
+                    <input type="text" name="zipcode" placeholder="Digitar o CEP" maxlength="9" class="text-input" 
+                    value="">
+                    <input type="hidden" name="zipCodeId" class="text-input" value="">
+
+                    <div class="second-step">
+                        <button color="red" class="btn-sucess">Confirmar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
