@@ -1,7 +1,13 @@
-.container {
+#page-location {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99999;
+}
+#page-location .container {
     font-family: "Open Sans", arial, sans-serif;
 }
-.location-form {
+#page-location .location-form {
     left: 50%;
     max-width: 320px;
     position: absolute;
@@ -9,19 +15,19 @@
     transform: translateX(-50%);
     width: 100%;
 }
-.location-wrapper {
+#page-location .location-wrapper {
     display: flex;
     width: 100%;
     height: 100%;
     position: fixed;
     background: url(img/background.png);
 }
-.overlay {
+#page-location .overlay {
     background-color: #0007;
     width: 100%;
     height: 100%;
 }
-.background-form {
+#page-location .background-form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,7 +38,7 @@
     padding: 3rem 0;
     position: relative;
 }
-.geolocation-link {
+#page-location .geolocation-link {
     color: #e31837;
     cursor: pointer;
     display: block;
@@ -40,19 +46,19 @@
     font-weight: 600;
     margin: 16px 0px 24px;
 }
-.modal-title {
+#page-location .modal-title {
     font-size: 1.5rem;
     margin: 0;
     text-align: center;
 }
-.modal-text {
+#page-location .modal-text {
     color: #2e2e2e;
     font-size: 16px;
     margin: 8px 0px 0px;
     padding: 0px 84px;
     text-align: center;
 }
-.region-select {
+#page-location .region-select {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -60,7 +66,7 @@
     text-align: center;
     flex-direction: column;
 }
-.text-input, #stateForm {
+#page-location .text-input, #stateForm {
     margin: 0.5rem 0px;
     width: 100%;
     padding: 0.5rem 1.25rem;
@@ -75,10 +81,10 @@
     max-width: 250px;
     text-align: center;
 }
-#stateForm {
+#page-location #stateForm {
     max-width: 290px;
 }
-.btn-sucess {
+#page-location .btn-sucess {
     display: block;
     float: none;
     margin: auto;
@@ -93,10 +99,10 @@
     border-radius: 5px;
 }
 @media(min-width:768px){
-    .background-form{
+    #page-location .background-form{
         padding: 3rem 1.5rem;
     }
-    .location-form {
+    #page-location .location-form {
         max-width: 522px;
     }
 }
