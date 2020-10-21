@@ -7,15 +7,11 @@
         <script src="https://kit.fontawesome.com/290df5bba9.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="./style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
         <script src="./main.js"></script>
-        <script src="jqueryMask.js" type="text/javascript"></script>
     </head>
 
     <body>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
-        <script>
-            $('input[name="zipcode"]').mask('00000-000');
-        </script>
         <div class="container" id="page-location">
             <div class="location-wrapper overlay overlay-dark visible">
                 <div class="overlay">
@@ -29,9 +25,11 @@
                 </div>
                 <form autocomplete="off" class="location-form">
                     <div class="background-form">
-                        <h2 class="modal-title">Onde você está?</h2>
+                        <h2 class="modal-title"><i class="fas fa-map-marker-alt"></i> Onde você está?</h2>
                         <p class="modal-text">
                             Dessa forma você terá acesso aos produtos e ofertas da sua região.
+                            <br><br>
+                            Defina sua localização:
                         </p>
                         <div class="region-select">
                             <select name="state" id="stateForm">
@@ -65,8 +63,8 @@
                                 <option value="TO">Tocantins</option>
                             </select>
                         </div>
-                        <span class="modal-text">ou</span>
-                        <input type="text" name="zipcode" id="cep" placeholder="Digitar o CEP" maxlength="9" class="text-input"
+                        <span class="modal-text" style="margin:0;">ou</span>
+                        <input type="text" name="zipcode" placeholder="Digitar o CEP" maxlength="9" class="text-input" 
                         value="">
 
                         <div class="second-step" id="teste">
@@ -77,5 +75,4 @@
             </div>
         </div>
     </body>
-
 </html>

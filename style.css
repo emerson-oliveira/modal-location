@@ -3,8 +3,6 @@
     width: 100vw;
     height: 100vh;
     z-index: 99999;
-}
-#page-location .container {
     font-family: "Open Sans", arial, sans-serif;
 }
 #page-location .location-form {
@@ -20,7 +18,7 @@
     width: 100%;
     height: 100%;
     position: fixed;
-    background: url(img/background.png);
+    background: url('/i/background.png');
 }
 #page-location .overlay {
     background-color: #0007;
@@ -50,12 +48,14 @@
     font-size: 1.5rem;
     margin: 0;
     text-align: center;
+    font-weight: bold;
+    color: #333;
 }
 #page-location .modal-text {
     color: #2e2e2e;
     font-size: 16px;
     margin: 8px 0px 0px;
-    padding: 0px 84px;
+    padding: 0px 70px;
     text-align: center;
 }
 #page-location .region-select {
@@ -79,10 +79,8 @@
     appearance: none;
     transition: all 300ms ease-in 0s;
     max-width: 250px;
-    text-align: center;
-}
-#page-location #stateForm {
-    max-width: 290px;
+    text-align: left;
+    box-sizing: border-box;
 }
 #page-location .btn-sucess {
     display: block;
@@ -91,12 +89,14 @@
     border: 0;
     background-color: #e31837;
     color: #fff;
-    height: 40px;
-    line-height: 32px;
-    width: 290px;
+    height: 35px;
+    width: 250px;
     font-size: 16px;
     font-weight: 600;
-    border-radius: 5px;
+    border-radius: 20px;
+}
+#page-location .fas.fa-map-marker-alt {
+    color: #E31837;
 }
 @media(min-width:768px){
     #page-location .background-form{

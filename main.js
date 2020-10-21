@@ -3,7 +3,7 @@ const regiao_2 = ['SP']
 const regiao_3 = ['RJ']
 
 $(document).ready(function() {
-    $('input[name=\"zipcode\"]').mask("99999-999");
+    $('input[name="zipcode"]').mask('00000-000');
 
     $("#teste").attr("disabled", true).hide();
     $('input[name="zipcode"]').on('keyup', function() {
@@ -23,22 +23,25 @@ $(document).ready(function() {
                     if(data['erro'])
                         alert("Formato de CEP inválido.");
                     else{
-                        $("#teste").attr("disabled", false).show();
-
-                        $('#stateForm').val(data['uf']);
-
-
+                        $('#stateForm').val(data['uf']).change();
                         console.log(cepCodigo[0],'posicao');
-                        checa_regiao(data['uf']);
                     }
-
                 });
         }
     });
-    $("#stateForm").change(function () {
-        checa_regiao(this.value)
-
-    });
+    $('select#stateForm').on('change', function(){
+        if($('select#stateForm').val() == ''){
+            $('#teste').hide()
+        }else{
+            $('#teste').show()
+        }
+    })
+        
+    $('#page-location .btn-sucess').click(function(e){
+        e.preventDefault();
+        
+        checa_regiao($('select#stateForm').val());
+    })
 });
 
 
@@ -46,10 +49,12 @@ function checa_regiao(estado) {
 
     if(regiao_1.includes(estado)){
         console.log('regiao 1')
+        window.location.href = "/parceiros/regiao_1";
     }else if(regiao_2.includes(estado)){
         console.log('regiao 2')
-    }else {
+        window.location.href = "/parceiros/regiao_2";
+    }else if(regiao_3.includes(estado)){
         console.log('regiao 3')
+        window.location.href = "/parceiros/regiao_3";
     }
-
 }
