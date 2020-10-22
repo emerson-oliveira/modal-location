@@ -24,6 +24,8 @@ $(document).ready(function() {
                         alert("Formato de CEP inválido.");
                     else{
                         $('#stateForm').val(data['uf']).change();
+                        localStorage.setItem("Estado", data['uf']);
+                        localStorage.setItem("ultima_atualizacao", Date.now().toString());
                         console.log(cepCodigo[0],'posicao');
                     }
                 });
@@ -41,6 +43,8 @@ $(document).ready(function() {
         e.preventDefault();
         
         checa_regiao($('select#stateForm').val());
+        localStorage.setItem("Estado", $('select#stateForm').val());
+        localStorage.setItem("ultima_atualizacao", Date.now().toString());
     })
 });
 
