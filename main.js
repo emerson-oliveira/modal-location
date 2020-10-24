@@ -52,13 +52,14 @@ $(document).ready(function() {
 function checa_regiao(estado) {
 
     if(regiao_1.includes(estado)){
-        console.log('regiao 1')
-        window.location.href = "/parceiros/regiao_1";
-    }else if(regiao_2.includes(estado)){
+                console.log('regiao 1')
+        window.location.href = "/parceiros/regiao_1";        
+    }else if(regiao_2.includes(estado)){        
+        console.log('regiao 3')
+        window.location.href = "/parceiros/regiao_3";        
+    }else{
         console.log('regiao 2')
         window.location.href = "/parceiros/regiao_2";
-    }else if(regiao_3.includes(estado)){
-        console.log('regiao 3')
-        window.location.href = "/parceiros/regiao_3";
     }
+
 }
