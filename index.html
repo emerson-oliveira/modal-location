@@ -1,78 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mocal Localização</title>
-        <script src="https://kit.fontawesome.com/290df5bba9.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" type="text/css" href="./style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
-        <script src="./main.js"></script>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal Localização</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
 
-    <body>
-        <section class="container page-location" id="pageLocation">
-            <div class="location-wrapper overlay overlay-dark visible">
-                <div class="overlay">
-                    <div>
-                        <svg class="spinner" width="50" height="50" viewBox="0 0 66 66"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30">
-                            </circle>
-                        </svg>
-                    </div>
-                </div>
-                <form autocomplete="off" class="location-form">
-                    <div class="background-form">
-                        <h2 class="modal-title"><i class="fas fa-map-marker-alt"></i> Onde você está?</h2>
-                        <p class="modal-text">
-                            Dessa forma você terá acesso aos produtos e ofertas da sua região.
-                            <br><br>
-                            Defina sua localização:
-                        </p>
-                        <div class="region-select">
-                            <select name="state" class="state-form" id="stateForm">
-                                <option value="">Selecione o Estado</option>
-                                <option value="AC">Acre</option>
-                                <option value="AL">Alagoas</option>
-                                <option value="AP">Amapá</option>
-                                <option value="AM">Amazonas</option>
-                                <option value="BA">Bahia</option>
-                                <option value="CE">Ceará</option>
-                                <option value="DF">Distrito Federal</option>
-                                <option value="ES">Espírito Santo</option>
-                                <option value="GO">Goiás</option>
-                                <option value="MA">Maranhão</option>
-                                <option value="MT">Mato Grosso</option>
-                                <option value="MS">Mato Grosso do Sul</option>
-                                <option value="MG">Minas Gerais</option>
-                                <option value="PA">Pará</option>
-                                <option value="PB">Paraíba</option>
-                                <option value="PR">Paraná</option>
-                                <option value="PE">Pernambuco</option>
-                                <option value="PI">Piauí</option>
-                                <option value="RJ">Rio de Janeiro</option>
-                                <option value="RN">Rio Grande do Norte</option>
-                                <option value="RS">Rio Grande do Sul</option>
-                                <option value="RO">Rondônia</option>
-                                <option value="RR">Roraima</option>
-                                <option value="SC">Santa Catarina</option>
-                                <option value="SP">São Paulo</option>
-                                <option value="SE">Sergipe</option>
-                                <option value="TO">Tocantins</option>
-                            </select>
-                        </div>
-                        <span class="modal-text" style="margin:0;">ou</span>
-                        <input type="text" name="zipcode" placeholder="Digitar o CEP" maxlength="9" class="text-input" 
-                        value="">
+    <script
+      src="https://kit.fontawesome.com/290df5bba9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"
+    ></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+  </head>
 
-                        <div class="second-step" id="teste">
-                            <button color="red" class="btn-sucess">Confirmar</button>
-                        </div>
-                    </div>
-                </form>
+  <body>
+    <section class="container page-location" id="pageLocation">
+      <div class="location-wrapper overlay overlay-dark visible">
+        <div class="overlay">
+          <div>
+            <svg
+              class="spinner"
+              width="50"
+              height="50"
+              viewBox="0 0 66 66"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                class="path"
+                fill="none"
+                stroke-width="6"
+                stroke-linecap="round"
+                cx="33"
+                cy="33"
+                r="30"
+              ></circle>
+            </svg>
+          </div>
+        </div>
+        <form autocomplete="off" class="location-form">
+          <div class="background-form">
+            <h2 class="modal-title">
+              <i class="fas fa-map-marker-alt"></i> Onde você está?
+            </h2>
+            <p class="modal-text">
+              Dessa forma você terá acesso aos produtos e ofertas da sua região.
+              <br /><br />
+              Defina sua localização:
+            </p>
+            <div class="region-select">
+              <select name="state" class="state-form" id="stateForm">
+                <option value="">Selecione o Estado</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+              </select>
             </div>
-        </section>
-    </body>
+            <span class="modal-text" style="margin: 0">ou</span>
+            <input
+              type="text"
+              name="zipcode"
+              id="zipcode"
+              placeholder="Digitar o CEP"
+              maxlength="9"
+              class="text-input"
+              value=""
+            />
+            <div class="second-step" id="secondStep">
+              <button color="red" class="btn-sucess" id="btnSucess">
+                Confirmar
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
 </html>
